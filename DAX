@@ -1,1 +1,9 @@
 
+Ventas Acumulativas = 
+SUMX(
+    FILTER(
+        ALL('Tabla de Productos'), 
+        'Tabla de Productos'[Ventas] >= MAX('Tabla de Productos'[Ventas])
+    ),
+    'Tabla de Productos'[Ventas]
+)

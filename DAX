@@ -7,3 +7,22 @@ SUMX(
     ),
     'Tabla de Productos'[Ventas]
 )
+
+
+
+Crear una medida para el total acumulado: La primera medida que necesitas calcular es la 
+contribución acumulativa de cada elemento en orden descendente. Puedes hacerlo utilizando 
+la función RANKXpara ordenar los elementos por valor y luego la función SUMXpara calcular 
+el total acumulado. Aquí hay una medida DAX para hacerlo:
+
+Total Acumulado = 
+VAR ElementosOrdenados = 
+    ADDCOLUMNS(
+        ALL('Datos'),
+        "Rank", RANKX(ALL('Datos'), 'Datos'[Valor], , DESC)
+    )
+RETURN
+    SUMX(
+        FILTER(ElementosOrdenados, [Rank] <= MAX(ElementosOrdenados[Rank])),
+        'Datos'[Valor]
+    )

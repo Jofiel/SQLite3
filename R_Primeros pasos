@@ -1,0 +1,30 @@
+R es un lenguaje de programacion que nace enfocado al analisis estadistico. Es desarrollado a principios de los 90
+por Ross Ihaka y Robert Gentleman a partir de un lenguje llamado S. En la actualidad es uno de los lenguajes mas
+utilizados. Hay varias caracteristicas que lo hacen un lenguaje tan apreciado. Es un lenguaje "open source", con 
+una gran cantidad de librerias gratuitas y una gran comunidad de soporte. Sus utilidades tan a nivel estadistico como
+grafico son muy potentes y flexibles.
+
+RStudio:
+Es un software que actua de interfaz, utilizando a R como base pero con un aspecto mucho mas amigable. 
+Una libreria es un conjunto de funciones desarrolladas. En R existen tres principales repositorios de librerias.
+
+CRAN
+Es el repositorio oficial de la comunidad de R y las librerias que alberga siguen un proceso de validacion antes de 
+quedar publicadas. Actualmente hay mas de 170,000 librerias. Para instalar desde el CRAN basta con teclear el comando:
+
+install.packages("NombreLibreria")
+
+Uno de los argumentos que aqcepta es "dependencies", que instalara todas las librerias de las que depende la que deseamos 
+instalar en el momento si marcamos dependencies = TRUE.
+
+Por ejemplo:
+Podemos instalar la libreria "tidyverse"
+install.packages("tidyverse", dependencies = TRUE)
+
+
+Cargar Librerias:
+Una vez descargadas las librerias podemos comprobar que se han instalado correctamente cargando a traves del comando
+library(NombreLibreria). Por ejemplo
+
+library(tidyverse)
+

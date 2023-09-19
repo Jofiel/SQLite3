@@ -26,3 +26,38 @@ RETURN
         FILTER(ElementosOrdenados, [Rank] <= MAX(ElementosOrdenados[Rank])),
         'Datos'[Valor]
     )
+
+
+
+Clasificacion estatica
+
+=CALCULATE(
+    VALUES(segmentacion[Precio]) -- donde "VALUES" esta siendo un buscarV, busca en la tabla segmentacion, col precio.
+        ,FILTER(segmentacion,ventas[Precio]>=segmentacion[Límite Inferior]&&ventas[Precio]<segmentacion[Límite superior])
+        -- FILTER por otra parte, en la tabla de segmentacion, filtra por el criterios que damos y regresa solo el que cumple.
+        )
+
+
+Clasificacion segun Pareto:
+
+Calculamos el monto por producto
+
+=CALCULATE(
+    SUM(productos[Ventas totales]),
+        ALL(productos),
+            productos[Ventas totales]>= EARLIER(productos[Ventas totales])
+            )
+
+ALL -- estoy diciendo que evada todos los filtros, ya se explicito o implicito.
+-- Para controlar debe estar ordenada la columna de las ventas acumuladas.
+
+Solo resta calcular el porcentaje acumulado como columna calculada
+
+=productos[Ventas acumuladas]/SUM(productos[Ventas totales])
+
+Solo falta clasificar y lo haremos con la funcion "Switch"
+
+=SWITCH(TRUE(),
+    productos[Porcentaje acumulado]<=0.8,"A",
+        productos[Porcentaje acumulado]<=0.95,"B","C"
+        )

@@ -38,9 +38,6 @@ Clasificacion estatica
         )
 
 
-
-
-
 Clasificacion segun Pareto:
 
 --Tenemos que ordenar por la columna de la cual vamos a calcular la venta, de mayor a menor, en este caso por la venta
@@ -55,6 +52,35 @@ Val acumulado =CALCULATE(
 
 ALL -- estoy diciendo que evada todos los filtros, ya se explicito o implicito.
 -- Para controlar debe estar ordenada la columna de las ventas acumuladas.
+
+/*EARLIER: Se utiliza en columnas calculadas y permite acceder al valor de una columna (de la fila siendo analizada)
+en calculos anidados.
+
+SINTAXIS: EARLIER(Columna,numero)
+
+Ejemplo: Partinos de una tabla [Products] con un campo llamado [Product] que muestra los tipos de productos A,B,C. Queremos añadir una
+columna calculada  en la que se indique el numero de productos totales con el mismo nombre que el incluido en la fila que se
+este considerando en cada momento con la expresion DAX.
+
+numero = COUNTROES(
+    FILTER(
+        Products,
+        Products[Product] = EARLIER(Products[Product])
+    )
+)
+
+Vamos a ver como se calcula: La expresion se ejecuta para cada fila de la tabla [Products], creandose para cada una de ellas
+un contexto de fila. Cada vez que se crea este contexto, la funcion EARLIER permite devolver el valor que, en dicha fila, tome
+una columna.
+
+Acontinuacion se ejecuta la funcion COUNTROWS para contar el numero de filas que hay en el resultado de filtrar la tabla
+[Products] dejando solo aquellas filas en las que el producto coincida con el devuelto por la funcion EARLIER. Es decir, 
+para la primera fila, se estaria filtrando la tabla para dejar solo los productos cuyo nombre es "A"
+
+
+
+*/
+
 
 --Solo resta calcular el porcentaje acumulado como columna calculada
 

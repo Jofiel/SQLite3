@@ -43,9 +43,11 @@ Clasificacion estatica
 
 Clasificacion segun Pareto:
 
+--Tenemos que ordenar por la columna de la cual vamos a calcular la venta, de mayor a menor, en este caso por la venta
+
 Calculamos el monto por producto
 
-=CALCULATE(
+Val acumulado =CALCULATE(
     SUM(productos[Ventas totales]),
         ALL(productos),
             productos[Ventas totales]>= EARLIER(productos[Ventas totales])
@@ -54,13 +56,13 @@ Calculamos el monto por producto
 ALL -- estoy diciendo que evada todos los filtros, ya se explicito o implicito.
 -- Para controlar debe estar ordenada la columna de las ventas acumuladas.
 
-Solo resta calcular el porcentaje acumulado como columna calculada
+--Solo resta calcular el porcentaje acumulado como columna calculada
 
-=productos[Ventas acumuladas]/SUM(productos[Ventas totales])
+Porcentaje acumulado =productos[Ventas acumuladas]/SUM(productos[Ventas totales])
 
-Solo falta clasificar y lo haremos con la funcion "Switch"
+--Solo falta clasificar y lo haremos con la funcion "Switch"
 
-=SWITCH(TRUE(),
+Frecuencia=SWITCH(TRUE(),
     productos[Porcentaje acumulado]<=0.8,"A",
         productos[Porcentaje acumulado]<=0.95,"B","C"
         )

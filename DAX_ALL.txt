@@ -1,0 +1,55 @@
+ALL: 
+
+Devuelve todas las filas de una tabla o todos los valores de una columna, omitiendo los filtros que se pudieran haber aplicado. Esta funcion es util para borrar filtros y crear calculos en todas las filas de una tabla.
+
+
+
+
+SINTAXIS:
+
+ALL([Tabla | Columna])
+
+
+-Tabla: Tabla en la que se van a borrar los filtros.
+-Columna: Columna en la que se van a borrar los filtros.
+
+El argumento de funcion ALL deben ser una referencia a una tabla base o a una columna base.
+
+
+
+
+VALOR DEVUELTO:
+
+Tabla o columna con filtros quitados.
+
+
+
+
+USOS:
+
+ALL(Table): Quita todos los filtros de la tabla especificada.
+
+ALL(Column[]): Quita todos los filtros de las columnas especificadas de la tabla.Todos los demas filtros de las demas columnas de la tabla se siguen aplicando. Resulta util cuando se requiere quitar filtros de contexto de una o varias columnas especificadas y conservar todos los demas filtros de contexto.
+
+ALLEXCEPT(Colum[]): Quita todos los filtros de contexto de la tabla, excepto los que se aplican a las columnas especificadas.
+
+
+Ejemplos2: Requiete la participacion de los montos de compra, por lo que se necesita una medida que los calcule.
+
+=SUM(Ventas[Venta])/
+	CALCULATE(SUM(Ventas[Venta]),ALL(Ventas))
+
+
+Calculamos la participacion de los productos por toda la suma de los montos de compra, por eso usamos un calculate y usamos como filtro la funcion ALL.
+
+
+
+ALLSELECTED(Tabla): Quita los filtros de contexto de las columnas y las filas de la consulta actual, a la vez que conserva todos los demas filtros de contexto o filtros explícitos.
+
+
+
+Ejemplo1: Requerimos la participacion de los montos de compra, por lo que se necesita una medida que los calcule, pero que al aplicar un filtro de años, no calcule la participacion tomando el monto total de todos los años.
+
+=SUM(Ventas[Venta])/
+	CALCULATE(SUM(Ventas[Venta]),ALLSELECTED(Ventas))
+

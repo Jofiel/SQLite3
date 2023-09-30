@@ -1,0 +1,21 @@
+Clasificación de ABC de inventarios
+
+Los artículos se clasifican en función de su volumen (Categorías A, B, C),
+y de la variabilidad de su demanda (Categorias X, Y, Z)
+
+Con la bombinacion de los dos metodos, los articulos se agrupan en 9
+categorias, de AX a CZ como una matriz
+
+Un analisis ABC XYZ Intenta comprender y cuantificar la "varianza de la demanda"
+(o volatilidad) para cada SKU a lo largo de un periodo observado y combinar las
+clasicas clases A, B y C con las adicionales X, Y y Z. 
+
+En pocas palabras, "LA VARIANZA DE LA DEMANDA" es una medida de cuanto cambio la demanda
+a lo largo del periodo observado, esto puede reflejar periodos inesperados y/o aislados 
+de demanda extremadamente alta o baja. Estas designaciones X, Y, Z estan destinadas a 
+capturar esta varianza. 
+
+Bajo esta clasificacion, los SKU de clase X son los mas estables (experiemntan la menor varianza de la demanda)
+los clase Y son algo estables (experimentan una varianza de la demanda moderada) y los 
+clase Z son los mas inestables (presentan la mayor varianza de la demanda)
+

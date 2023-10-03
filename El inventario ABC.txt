@@ -1,0 +1,105 @@
+El inventario ABC:
+
+Es un metodo de clasificacion de inventarios que permite asociar a cada SKU, con una clase o categoria de productos,
+con respecto a su importancia para la empresa. El inventario ABC ayuda a las organizaciones a identificar que productos
+son criticos para el exito y la rentabilidad de los del negocio. 
+
+Se logra calculando el "VALOR DE CONSUMO de cada SKU", numero de unidades vendidas, multiplicadas por costo unitario. 
+
+
+Segun el principio de Pareto, en casi cualquier sistema, el 80% de los resultados provienen del 20% de los esfuerzos, 
+mientras que el 20% de los resultados provienen del 80% de los esfuerzos. 
+
+El inventario ABC, se basa en identificar el 20% de los productos que generan aproximadamente el 80% de los resultados 
+economicos y los categoriza como productos Clase A, el siguiente 30% de productos los clasifican como productos Clase B y
+al 50% restante como productos Clase C. 
+
+
+El inventario ABC proporciona informacion valiosa para la toma de deciosiones, "con respecto de la reduccion de sus costos
+de mantener inventarios", prioriza la adquisicion de productos de la clase A sobre las clase B o C, hace sentido pues tienen 
+mejor rotacion, lo que provova que se recupere el dinero invertido con mayor velocidad.
+
+
+La desventaja de la clasificacion ABC es que se tiene un analisis Unidimensional, solo respecto al Valor de consumo de cada SKU,
+asi surge la clasificacion XYZ que clasifica a los productos segun su "VARIABILIDAD DE SU DEMANDA", entender que productos tienen una
+demanda constante.
+
+X - Productos con demanda constante en el tiempo.
+
+Y - Productos con algunas fluctuaciones en la demanda. Usualmente se pueden predecir tendencias en esta categoria. 
+
+Z - Productos con demanda impredecible.
+
+Se calcula con la desviacion estandar. Verificar la siguiente liga:
+
+https://www.netlogistik.com/es/blog/el-metodo-xyz-de-clasificacion-de-inventarios
+
+
+Reglas para la frecuencias por ventas:
+
+1- Se obtiene el 80-20 del total de los productos.
+2- Se consideran SI(<80%,"A",SI(>95%,"C","B"))
+
+
+
+Notas para la clasificacion X, Y y Z
+
+
+MEDIDAS DE COLOCACION O DE POSICION RELATIVA:
+
+	Una medida de colocacion o de posicion relativa para una distribucion de frecuencias es aquel valor para
+	el cual una posicion especifica de la distribucion queda en o debajo de el.
+
+	La mediana, los percentiles, deciles y cuartiles son ejemplos de medidas de posicion relativa.
+
+	
+PERCEPTILES: 
+
+	El p-ésimo punto (Perceptil) es un valor tal que a lo más un p% de datos tienen dicho o menos de ese valor y, al menos, 
+	un (100 - p)% de los datos tienen este valor o más.
+
+	Para calcular el p-ésimo (punto) percentil de un conjunto de n datos, es importante que tengamos en cuenta los siguiientes pasos:
+
+	1.Ordenamos los datos de manera ascendente.
+	2.Calculamos un indice i a traves de la formula i = (np)/100, siendo p el percentil de interes y n, la cantidad de datos.
+	3.Decidamos el indice i a traves de uno de estos casos: 
+
+		-Si el indice i no es entero, redondeamos al entero siguiente. Este valor aproximado de i indica la posicion del p-esimo
+		 percentil.
+		-Si i es entero, el p-esimo percentil es el promedio de los valores de los datos ubicados en las posiciones i e i+1.
+
+CUARTILES: 
+
+	Los cuartiles son casos particulares de los percentiles.
+	
+	Los cuartiles son las medidas de posicion relativa correspondiente a un conjunto ordenado de datos divididos en 4 partes iguales y
+	se definen así:
+
+	Q1 = Primer cuartil o 25-esimo percentil.
+	Q2 = Segundo cuartil o 50-esimo percentil.
+	Q3 = tercer cuartil o 75-esimo percentil.
+
+
+DECILES: 
+
+
+
+FRECUENCIAS NO AGRUPADAS:
+
+	Son medidas que describen el comportamiento de un conjunto de datos. Como lo son "tendencia central", "de colocacion", las de 
+	"dispersion", y las de "forma".
+
+MEDIDAS DE TENDENCIA CENTRAL:
+
+	
+	Se evidencio algo en cuanto a la frecuencia con que se presentan los valores, algunos valores son mas frecuentes que otros,
+	ademas se observo una clara tendencia de agrupacion en un vecindario de los valores mas frecuentes, lo cual hace que las 
+	graficas adquieran una cierta tendencia.
+	
+
+
+
+
+
+
+

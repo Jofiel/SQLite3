@@ -83,6 +83,12 @@ CUARTILES:
 DECILES: 
 
 
+HISTOGRAMA:
+
+	Es una forma de representacion grafica de una distribucion de frecuencia que consiste en representar las frecuencias
+	(absolutas, relativas, acumuladas,..) por medio de areas de rectangulos
+
+
 
 FRECUENCIAS NO AGRUPADAS:
 

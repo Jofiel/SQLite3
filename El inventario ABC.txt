@@ -182,7 +182,7 @@ TEOREMA:
 	La suma de las desviaciones de los valores para cualquier conjunto de numeros x1,...,xn es igual a cero. 
 
 
-VARIANZA Y DESVIACION ESTANDAR O TIPICA:
+VARIANZA Y DESVIACION ESTANDAR O TIPICA: (son muy utiles para comparar la dispersion de dos poblaciones).
 
 	El rango y el rango intercuartil son dos mediciones, pero estas no toman en cuenta como se distribuyen o se agrupan las observaciones.
 	Dos medidas de uso comun que si toman en cuenta la distribucion de los valores de los datos son la varianza y su raiz cuadrada,
@@ -207,7 +207,47 @@ LA DESVIACION MEDIA:
 
 VENTAJAS Y DESDVENTAJAS DE LA VARIANZA Y LA DESVIACION ESTANDAR O DEVIACION MEDIA:
 
-	Es mas facil conceptuar "el promedio de las desviaciones respecto"
+	Es mas facil conceptuar "el promedio de las desviaciones respecto de la media" que "la raiz
+	cuadrada del promedio del cuadrado de las desviaciones respecto de la media".
+
+	En segundo lugar, dado que el calculo de la varianza y la desviacion tipica elevan al cuadrado
+	las desviaciones individuales, estas dos medidas se veran mas influenciadas por observaciones
+	increiblemente grandes o extremadamente pequeñas que la desviacion media. 
+
+	A pesar de sus ventajas la desviacion media se usa poco, debido a las complicaciones que pueden 
+	surgir si se usa para hacer inferencias sobre una poblacion a partir de observaciones de muestra.
+
+	La varianza y la desviacion tipica tienen una limitacion seria: pueden verse afectadas en presencia
+	de valores extremos, pues ambas dependen de la media que se modifica por las medidas extremas.
+
+	Cuando en un conjunto de datos estan presentes valores extremos y requerimos una medida resistente a 
+	ellos necesitamos utilizar el rango cuartil.
+
+
+UTILIDAD DE LA DESVIACION EN UNA POBLACION:
+
+	Puede usarse para estimar el porcentaje de valores de la poblacion que se encontraran a menos de una distancia
+	especifica de la media. Para contruir tales estimaciones se usara la "regla de Tchebychev" valida para cualquier
+	poblacion.  
+
+La regla de "TCHEBYCHEV": 
+
+	Para cualquier poblacion con media x^_ y desviacion estandar "sig" por lo menos el 100(1-1/K^2)% de los valores de la 
+	pobalcion se encuentran a una distancia de la media menor que k veces la desviacion estandar, para cualquier numero k>1.
+	En otras palabras dentro del intervalo (x^_ - ksig, x^_ + ksig) se encuentra por lo menos el 100(1-1/K^2)% de los valores
+	de la poblacion. 
+
+
+	Consideremos la tabla para K>0
+
+	K = 1.5 >> 100(1-1/k^2)% >> 55.6%
+	K = 2 >> 75%
+	k = 2.5 >> 84%
+	k = 3 >> 88.9
+	k = 3.5 >> 91.18
+	k = 4 >> 93.7
+
+	
 
 
 

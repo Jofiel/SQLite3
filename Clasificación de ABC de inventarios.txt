@@ -19,6 +19,3 @@ Bajo esta clasificacion, los SKU de clase X son los mas estables (experiemntan l
 los clase Y son algo estables (experimentan una varianza de la demanda moderada) y los 
 clase Z son los mas inestables (presentan la mayor varianza de la demanda)
 
-
-
-

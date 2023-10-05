@@ -45,6 +45,47 @@ Reglas para la frecuencias por ventas:
 Notas para la clasificacion X, Y y Z
 
 
+
+
+MEDIDAS DE CENTRALIZACION:
+
+HISTOGRAMA:
+
+	Es una forma de representacion grafica de una distribucion de frecuencia que consiste en representar las frecuencias
+	(absolutas, relativas, acumuladas,..) por medio de areas de rectangulos.
+
+MEDIA ARITMETICA:
+
+	La media aritmetica de un conjunto de numeros se encuentra sumando los numeros y dividiendolo despues entre la cantidad de datos.
+
+DESVENTAJA DE LA MEDIA:
+
+	Se ve afectada por los valores extremos del final de una distribucion. Como depende del valor de cada medida, los valores extremos
+	pueden llevarla a representar defectuosamente los datos.
+
+MEDIANA:
+
+	Para datos medidos en almenos una escala de intervalo, la MEDIANA es el puntaje medio ordenado.
+
+
+RANGO MEDIO:
+
+	El rando medio de un conjunto de datos es el promedio de las medidas mayor y menor. Rango Medio RM = (MAX + MIN)/2
+
+
+MEDIA GEOMETRICA: 
+
+	De un conjunto de n numeros enteros positivos se define como la n-esima raiz del producto de los n valores. Es decir, la media 
+	geometrica de los n numeros positivos x1,x2,....,xn se calcula traves:
+	Media geometrica = (x1x2...xn)^1/n 
+
+
+VENTAJAS DE LA MEDIA GEOMETRICA:
+
+	La media geometrica es mejor que la media aritmetica para promediar porcentajes
+
+
+
 MEDIDAS DE COLOCACION O DE POSICION RELATIVA:
 
 	Una medida de colocacion o de posicion relativa para una distribucion de frecuencias es aquel valor para
@@ -82,11 +123,81 @@ CUARTILES:
 
 DECILES: 
 
+	Los DECILES son las medidas de posicion relativa correspondiente a un conjunto de datos (ordenados ascendentemente) que esta 
+	dividiendo en diez partes, de tal forma que cada parte contiene aproximadamente el 10% de las medidas.
 
-HISTOGRAMA:
 
-	Es una forma de representacion grafica de una distribucion de frecuencia que consiste en representar las frecuencias
-	(absolutas, relativas, acumuladas,..) por medio de areas de rectangulos
+***********************************************************************************************************************************
+
+
+
+MEDIDAS DE DISPERSION O DE VARIABILIDAD:
+
+	Una medida de centralizacion casi nunca es suficiente por si sola para analizar adecuadamente las caracteristicas  de un conjunto
+	de datos. Por lo general necesitaremos una medida de dispersion o variacion de los datos, como:
+
+		Rango 
+		Recorrido 
+		Rango Intercuartil 
+		La desviacion
+		La varianza
+		La desviacion estandar
+		Coeficiente de variacion.
+
+
+
+RANGO O RECORRIDO:
+
+	Se define como Rango o Recorrido de un conjunto de datos numericos como la diferencia entre el dato mas alto y el mas bajo.
+
+	VENTAJA: en su ventaja consiste en que es facil de calcular y su desventaja es solo considera dos de la gran cantidad de datos que
+	hay en un conjunto.
+
+RANGO INTERCUARTIL:
+
+	Una medida de dispersion que elimina la infuencia de los valores extremos de los datos es el rango intercuartil.
+
+	El RI (Rango Intercuartil) es la diferencia entre el tercero y el primer cuartil. Es decir:
+
+		R.I. = Q3 - Q1 
+
+	Rango intercuartil contiene el 50% de los datos, dejando a la izquierda el 25% inferior y a la derecha el 25% superior.
+
+
+
+DESVIACION:
+
+	La desviacion de un dato se define como la diferencia entre el dato y la media del conjunto de datos de donde proviene dicho dato.
+	Es decir, sean dados los datos x1, x2, x3, ... ,xn Entonces la desviacion del dato xi se define como:
+
+
+		Desviacion del dato X1 = xi - x^_
+
+
+	Una desviacion positiva para una medida indica que la medida esta por encima de la media, mientras que la desviacion negativa nos 
+	señala que esta por debajo de la media. 
+
+TEOREMA: 
+
+	La suma de las desviaciones de los valores para cualquier conjunto de numeros x1,...,xn es igual a cero. 
+
+
+VARIANZA Y DESVIACION ESTANDAR O TIPICA:
+
+	El rango y el rango intercuartil son dos mediciones, pero estas no toman en cuenta como se distribuyen o se agrupan las observaciones.
+	Dos medidas de uso comun si toman en cuenta la distribucion de los valores de los datos son la varianza y su raiz cuadrada,
+	la desviacion estandar. Estas medidas evaluan la manera en que fluctuan los valores respecto a la media.
+
+
+
+
+
+
+
+
+
+
+
 
 
 

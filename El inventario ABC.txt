@@ -185,8 +185,30 @@ TEOREMA:
 VARIANZA Y DESVIACION ESTANDAR O TIPICA:
 
 	El rango y el rango intercuartil son dos mediciones, pero estas no toman en cuenta como se distribuyen o se agrupan las observaciones.
-	Dos medidas de uso comun si toman en cuenta la distribucion de los valores de los datos son la varianza y su raiz cuadrada,
+	Dos medidas de uso comun que si toman en cuenta la distribucion de los valores de los datos son la varianza y su raiz cuadrada,
 	la desviacion estandar. Estas medidas evaluan la manera en que fluctuan los valores respecto a la media.
+
+
+VARIANZA DE UNA POBLACION:
+
+	Se define como el promedio de los cuadrados de las desviaciones de los valores y se denota por "sigma cuadrada".
+	Tambies es quivalente a "la media de los cuadrados menos el cuadrado de la media".
+
+LA DESVIACION ESTANDAR:
+
+	La desviacion estandar de un conjunto de datos o tipica simbolizada por "sigma" se define como la raiz cuadrada 
+	de la varianza de la poblacion de los datos. 
+
+LA DESVIACION MEDIA:
+
+	La desviacion media de un conjunto de datos es la media de las desviaciones de cada dato. La definicion es analoga
+	para poblaciones o un espacio muestral.
+
+
+VENTAJAS Y DESDVENTAJAS DE LA VARIANZA Y LA DESVIACION ESTANDAR O DEVIACION MEDIA:
+
+	Es mas facil conceptuar "el promedio de las desviaciones respecto"
+
 
 
 

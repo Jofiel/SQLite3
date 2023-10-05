@@ -24,6 +24,10 @@ La desventaja de la clasificacion ABC es que se tiene un analisis Unidimensional
 asi surge la clasificacion XYZ que clasifica a los productos segun su "VARIABILIDAD DE SU DEMANDA", entender que productos tienen una
 demanda constante.
 
+Observaciones: ABC tiene como objetivo descomponer financieramente una serie de SKU en una de tres clases a lo largo de un periodo de tiempo
+proporcionando asi un desgloce segun su importancia financiera ABC-XYZ intenta comprender y cuantificar la "varianza de la demanda o volatilidad"
+para cada SKU a lo largo de un periodo observado.
+
 X - Productos con demanda constante en el tiempo.
 
 Y - Productos con algunas fluctuaciones en la demanda. Usualmente se pueden predecir tendencias en esta categoria. 
@@ -247,7 +251,7 @@ La regla de "TCHEBYCHEV":
 	k = 3.5 >> 91.18
 	k = 4 >> 93.7
 
-	
+
 
 
 

@@ -58,7 +58,14 @@ CV alto:  nos indica que el gasto en el producto tiende a variar mucho en compar
 personas consumen cantidades muy diferentes del producto en diferentes momentos, lo que sugiere mayor volatilidad en la demanda.
 
 Sigma: nos indica cuanto varia el valor de consumo de ese producto de un mes a otro en ese periodo de un año. Te muestra que
-tan dispersos o diferentes son los numeros de ventas mensuales en comparacion con el promedio de ventas durante ese año. 
+tan dispersos o diferentes son los numeros de consumo mensuales en comparacion con el promedio de valor de consumo durante ese año. 
+Si la desviacion estandar es baja significa que las ventas tienden a estar cerca del promedio, lo que indica cierta estabilidad
+en el valor de consumo.
+Si la desviacion estandar es alta, significa que las ventas mensuales pueden ser muy diferentes al promedio, lo que indica una
+mayor volatilidad. 
+
+Una desviacion estandar baja sugiere ventas mas predecibles, mientras una desviacion estandar alta indica ventas mas volatiles O
+variables.   
 
 
 

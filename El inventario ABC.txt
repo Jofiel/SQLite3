@@ -44,6 +44,11 @@ Reglas para la frecuencias por ventas:
 1- Se obtiene el 80-20 del total de los productos.
 2- Se consideran SI(<80%,"A",SI(>95%,"C","B"))
 
+
+
+
+
+
 Notas para la clasificacion X, Y y Z
 
 Fluctuante: Que varia o cambia de manera no constante, significa que la demanda de un producto no permanece constante.

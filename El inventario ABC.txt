@@ -252,6 +252,20 @@ La regla de "TCHEBYCHEV":
 	k = 4 >> 93.7
 
 
+***********************************************************************************************************************************************************
+
+MEDIDAS DE FORMAS:
+
+	Proporcionan informacion sobre como se distribuyen los datos. 
+
+CLASIFICAN: Medidas de asimetria (o coeficiente de sesgo) y Medidas de curtosis (o de apuntamiento).
+
+COEFICIENTE DE SIMETRIA DE PERSON:
+
+	Simbolizado por Ap, se define como la diferencia entre la media aritmetica y la Moda dividida por la desviacion estandar. Cuando Ap = 0, se dice 
+	que la distribucion es simetrica; cuando Ap < 0 se dice que la distribucion es sesgada negativamente o a la izquierda, y cuando Ap > 0 se dice
+	que la distribucion es sesgada positivamente o a la derecha. 
+
 
 
 

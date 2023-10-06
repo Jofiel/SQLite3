@@ -44,11 +44,30 @@ Reglas para la frecuencias por ventas:
 1- Se obtiene el 80-20 del total de los productos.
 2- Se consideran SI(<80%,"A",SI(>95%,"C","B"))
 
-
-
 Notas para la clasificacion X, Y y Z
 
+Fluctuante: Que varia o cambia de manera no constante, significa que la demanda de un producto no permanece constante.
+puede aumentar o disminuir en funcion de varios factores: estacionalidad, tendencia de mercado. 
 
+CV: nos dice que tan estable o volatil es el valor de consumo de ese producto en comparacion con cuanto cuesta en promedio.
+
+CV Bajo: nos dice que su valor de consumo es relativamente estable en relacion de su valor de consumo promedio. Las personas
+tienden a consumir una cantidad similar del producto en diferentes tiempos. 
+
+CV alto:  nos indica que el gasto en el producto tiende a variar mucho en comparacion de su valor de consumo promedio. Las 
+personas consumen cantidades muy diferentes del producto en diferentes momentos, lo que sugiere mayor volatilidad en la demanda.
+
+Sigma: nos indica cuanto varia el valor de consumo de ese producto de un mes a otro en ese periodo de un año. Te muestra que
+tan dispersos o diferentes son los numeros de ventas mensuales en comparacion con el promedio de ventas durante ese año. 
+
+
+
+
+
+
+
+
+***************************************************************************************************************************************
 
 
 MEDIDAS DE CENTRALIZACION:

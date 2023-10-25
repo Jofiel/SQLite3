@@ -231,7 +231,7 @@ VARIANZA DE UNA POBLACION:
 
 LA DESVIACION ESTANDAR:
 
-	La desviacion estandar de un conjunto de datos o tipica simbolizada por "sigma" se define como la raiz cuadrada 
+	La desviacion estandar de un conjunto de datos simbolizada por "sigma" se define como la raiz cuadrada 
 	de la varianza de la poblacion de los datos. 
 
 LA DESVIACION MEDIA:
@@ -295,22 +295,7 @@ COEFICIENTE DE SIMETRIA DE PERSON:
 
 	Simbolizado por Ap, se define como la diferencia entre la media aritmetica y la Moda dividida por la desviacion estandar. Cuando Ap = 0, se dice 
 	que la distribucion es simetrica; cuando Ap < 0 se dice que la distribucion es sesgada negativamente o a la izquierda, y cuando Ap > 0 se dice
-	que la distribucion es sesgada positivamente o a la derecha. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	que la distribucion es sesgada positivamente o a la derecha.
 
 FRECUENCIAS NO AGRUPADAS:
 

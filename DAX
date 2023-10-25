@@ -92,3 +92,6 @@ Frecuencia=SWITCH(TRUE(),
     productos[Porcentaje acumulado]<=0.8,"A",
         productos[Porcentaje acumulado]<=0.95,"B","C"
         )
+
+JUAN ENRIQUE HERRERA MARTINEZ
+

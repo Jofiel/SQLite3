@@ -310,7 +310,13 @@ MEDIDAS DE TENDENCIA CENTRAL:
 	graficas adquieran una cierta tendencia.
 	
 
+**************************************************************************************************************************************
 
+El rango intercuartil RIC esta considerado un estadistico robusto por su baja exposicion a valores extremos.
+Solo considera observaciones entre el tercer y el primer cuartil.
+La presencia de valores extremos entre el primero y el tercer cuartil harán aumentar el rango intercuarlítico, pero a una tasa menor.
+
+Este enfoque te dará una medida de la variabilidad relativa de tus datos que no estará sesgada por los valores atípicos
 
 
 

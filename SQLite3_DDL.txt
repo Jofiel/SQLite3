@@ -1,0 +1,151 @@
+
+  DDL (Data Manipulation Language):
+
+  DDL se utiliza para definir la estructura, los nombres y los contenedores de datos dentro de una base de datos. Los mas comunes de estos objetos
+  son las tablas, indices, y views (consultas). 
+
+  La mayoria de las veces se utilizan comandos como CREATE TABLE, CREATE VIEW. El comando DROP se utiliza para eliminar un 
+  archivo existente, objeto y todos los datos que pueda contener. Ejemplo DROP TABLE, DROP INDEX.
+
+ -Una declaracion CREATE devolvera un error si un objeto con el nombre creado ya existe. Si la clausula opcional IF NOT EXISTS esta 
+  presente, entonces este error se suprime y no hace nada. Igualmente DROP permite un IF opcionar y la clausula EXISTS que ignora 
+  cualquier solicitud para eliminar un objeto que no esta alli. 
+
+ -No se pueden almacenar valores en una base de datos hasta que se defina una tabla para contener esos datos. CREATE crea una 
+  instancia de tabla, TABLE define el nombre de la tabla, mas el nombre de cada columna. Ademas del tipo de dato para cada columna
+  tambien se pueden especificar restricciones, condiciones y valores predeterminados opcionales. 
+
+ -La sentencia mas basica para crear una tabla es:
+
+	CREATE TABLE table_name (
+		colum_name colum_type,
+			[...],
+				);
+
+	-TIPOS DE DATOS:
+
+  -SQLite solo almite 5 tipos de datos concretos, son conocidos como clases de almacenamiento y representan la diferentes formas 
+  en las que SQLite podria elegir almacenar datos en el disco. Cada valor tiene una de estas cinco clases o afinidades:
+
+ - NULL: Un nulo se considera su propio tipo distinto. Un tipo NULL no contiene nungun valor.
+
+ - INTEGER: Un entero con signo, Los numeros enteros tienen un rango aproximado de 19 digitos. Los numeros enteros estan compuestos
+  por cualquier simple serie de digitos numericos sin comas, que no incluyen punto decimal, ni exponente. 
+
+ - FLOAT: Un numero de punto flotante, almacenado como un valor de 8 bytes en formato nativo del procesador. Los numero de punto decimal
+  estan representados por cualquier serie siemple de digitos numericos, que incluyen un punto decimal o exponente. 
+
+ -TEXT: una cadena de longitud variable. Los valores de texto se representan mediante cadenas de caracteres en formato unicio.
+
+ -BLOB: una longitud de bytes sin formato, copiados exactamente como se proporcionan. Los BLOB estan representados por cadenas de 
+  texto hexadecimal precedidas por una x. Por ejemplo x'1234ABCD' representan un BLOB de 4 bytes. BLOB significa objeto binario grande.
+
+ -NONE: Una columna sin afinidad no tiene preferencias sobre la clase de almacenamiento. Cada valor es almacenado como el tipo
+  proporcionado, sin ningun intento de convertir nada (o afinidad). EL TIPO DE AFINIDAD DE LA COLUMNA ESTA DETERMINADO POR EL TIPO 
+  DECLARADO DE LA COLUMNA (LAS COINCIDENCIAS DE SUBCADENAS NO DISTINGUE ENTRE MAYUSCULAS O MINUSCULAS).
+
+ -1. Sino se le asigna ninguna afinidad a la columna, entonces la columna se le otorga "none affinity" (ninguna afinidad).
+  Esto permite crear una tabla sin especificar ninguna afinidad para cada columna.
+
+	-RESTRICCIONES DE COLUMNA:
+
+ -Ademas de los nombres y tipos de columna, tambien es posible imponer restricciones, una vista mas completa de creacion de columnas es:
+
+ 	CREATE TABLE table_name (
+		column_name column_type column_constraints,
+			[  . . . ]
+
+		table_constraints,
+			[...]
+				);
+
+  Las restricciones de columna solo afectan a las columnas para las que son definidas, mientras que las restricciones de tabla se pueden 
+  utilizar para definir una restriccion en una o mas columnas.
+
+  Para los valores de fecha y hora SQLite incluye tres restricciones especiales, CURRENT_TIME, CURRENT_DATE, CURRENT_TIMESTAMP, estos
+  registraran la hora, la fecha o la fecha y hora respectivamente.
+
+  Las dos representaciones mas comunes utilizadas por SQLite3 son algun tipo de valor basado en texto y en valor de punto flotante.
+
+	FECHAS:
+
+	 -PUNTO FLOTANTE (FLOAT): Valor Juliano para la media noche del 1 de enero de 2010 es 2,455,197.5 Cuando se almacena
+	como valor de punto flotante de 64 byts, las fechas de la era moderna tienen un precision un poco mejor que un milisegundo.
+	Los valores se normalizar automaticamente y se pueden ocupar operaciones matematicas simples. Los valores julianos tambien
+	son capaces de expresar un muy amplio rango de fechas, lo que los hace utiles para registros historicos. La principal desventaja
+	es que necesitan conversion antes de ser ocupados.
+
+	-TEXT VALUE (TEXT): Estos normalmente se utilizan para contener un valor de fecha, un valor de hora o una combinacion de ambos.
+	Formatos de fecha como AAA-MM-DD, de horas como HH:MM:SS utilizando un valor de hora de 00 a 23. Si es necesario se pueden 
+	combinar. 
+	La principal ventaja de utilizar una representacion de texto es que son muy faciles de leer. Los valores almacenados no requieren 
+	ningun tipo de traduccion y se pueden transportar y visualizar facilmente.
+	La principal desventaja de los valores de texto es que cualquier operacion (que no se visualizacion) requiere una cantidad 
+	significativa de conversion de datos. Las conversiones de hora y fecha requieren algunos calculos complejos, para una simple
+	actualizacion o insercion pueden marcar una diferencia no muy notable, pero si puede serlo si se encuentra en una busqueda 
+	condicional.
+	Muchas operaciones, como comparaciones simples, requieren que los valores utilicen exactamente el mismo formato. Apesar de 
+	todas estas preocupaciones, no se puede negar que los valores de texto son mas faciles de mostrar y depurar. 
+
+	FUNCIONES DE FECHA Y HORA:
+
+	Casi toda la funcionalidad de fecha y hora en SQLite3 proviene de 5 funciones SQL. Una de estas funciones es basicamente un 
+	traductor universal, diseñado para convertir casi cualquier formato de hora o fecha a cualquier otro formato. Las otras 4 funciones
+	actuan como envoltorios convenientes que proporcionan un formato de salida fijo y predefinido.
+
+	FUNCION DE CONVERSION:
+	
+	La principal funcion para manipular fecha y hora es "strftime()"
+
+		strftime( format, time, modifier, modifier. . . )
+
+	La funcion strftime() esta modelada a partir de la funcion en C printf() para especificar una cadena de salida.
+	Por ejemplo, el formato de tiempo HH:MM:SS, se puede representar como "%H:%M:%f". Si el formato de cadena de
+	tiempo no es reconocido y no se puede decodificar, strftime() devolvera NULL.
+
+	Internamente strftime() siempre calculara una marca de tiempo completa que contiene tanto una fecha y valor de tiempo. 
+	Cualquier campo que no este especificado en la cadena de tiempo de entrada asumura valores predeterminados.
+	Los valores predeterminados de hora, minuto y segundo son cero o media noche, mientras la fecha predeterminada es 
+	1 de enero del 2000.
+
+	Estas cuatro funciones reconocen la misma cadena de tiempo y valores modificadores que usos de strftime()
+
+		-date( timestring, modifier, modifier,...) retorna formato YYYY-MM-DD, muy parecido a "%Y-%m-%d"
+		-time( timestring. modifier,... ) retorna formato HH:MM:SS equivalente al formato strftime "%H:%M:%S"
+		-datetime( timestring, modifier, modifier,...) retorna formato YYYY-MM-DD HH:MM:SS
+		-julianday( timestring, modifier, modifier,...) retorna ... %J
+
+	Ejemplos:
+
+	-Se muestra como tomar un dato de tiempo local y almacenarla como tiempo juliano:
+		julianday ( input_value, 'utc')
+	  Esto podria simplificarse al valor ahora, que se proporciona en:
+		julianday ( 'now' )
+
+	-Si desea mostrar un valor juliano fuera de la base de datos, querra convertir el valor juliano UTC a zona horaria local:
+		datetime ( julie_date, 'localtime' )
+
+	-Si quisiseras representar la fecha en un formato mas comodo para los lectores de EU, podriamos hacer algo como esto:
+		strftime( '%m/%d/%Y', '2010-01-31', 'localtime' )
+
+	-El datatime en el momento que estamos escribiendo esto lo podemos hacer de la siguiemte manera:
+		select strftime ('%d-%m-%Y %H:%M:%S', 'now', 'localtime');
+		>> 29-10-2023 21:19:21
+
+	-Si tenemos almacenadas nuestras fechas en formato de punto flotante o decimal, para visualizarlo como fecha, lo hariamos:
+		select strftime('%d-%m-%Y', 2455197.5, 'utc');
+		>>01-01-2010
+
+	
+	
+	
+
+	- 
+ 
+
+
+
+
+
+
+

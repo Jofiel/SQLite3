@@ -1,0 +1,107 @@
+
+What is SQLite?
+
+SQLite es un pquete de software de dominio publico que proporciona un sistema de gestion de base de datos relacionales o RDBMS.
+Los sistemas de bases de datos relacionales se utilizan para almacenar registros definidos por el usuario en tablas grandes. Implemeta
+un gestor de base de datos que le permite ejecutar comandos de consulta complejos que combinan datos de varias tablas para generar
+resumenes de datos.
+
+"Lite" no se refiere a sus capacidades. Mas bien es liviano en cuanto a su complejidad de configuracion.
+
+Caracteristicas:
+
+-SQLite no ituliza una arquitectura tradicional cliente/servidor.
+-SQLite accede directamente a sus archivos de almacenamiento.
+-La instancia completa de la base de datos reside en un unico archivo multiplataforma que no requiere administracion.
+-SQLite proporciona un entorno de base de datos relacional muy funcional y flexible que consume recursos minimos.
+-La bibl;ioteca SQLite compilada tiene menos de 700 KB en la mayoria de las plataformas y requiere menos de 4 MB para funcionar.
+-Todo el codigo fuente de SQLite esta escrito en C.
+
+
+Configuracion:
+
+-Para entrar a la aplicacion, ejecutemos el comando sqlite3. Si proporciona un nombre de archivo (como test.db), sqlite3 abrira
+ (o creara) ese archivo. Sino se proporciona ningun nombre de archivo, sqlite3 abrira automaticamente una base de datos temporal 
+ sin nombre:
+
+	$ sqlite3 test.db --> Nota: desde powershell es: > .\sqlite3.exe (que es el ejecutable)
+	SQLite version 3.6.23.1
+	Enter ".help" for instructions
+	Enter SQL statements terminated with a ":"
+	sqlite>
+
+-El prom "sqlite>" significa que "sqlite3>" esta listo para aceptar comandos.
+
+-Los comandos SQL tambien se pueden ingresar en varias lineas. Si no se encuentra un punto y coma final, sqlite3 entiende que la declaracion
+ continua. En este caso el mensaje cambiara a: "...>" para indicar que sqlite3 esta esperando mas entradas.
+
+	sqlite> select 1 + 2,
+   		...> 6 + 3;
+	3|9
+	sqlite>
+
+
+ Dot-commands (Comandos de punto):
+
+-Ademas de aceptar sentencias SQL, existen una serie de comandos especificos del Shell. Que se les denomina "dot-commands" (comandos
+ de punto) porque comienzan con un punto. Los comandos de punto controlan el formato de salida del shell.
+
+-No se pueden mezclar sentencias SQL y comandos de punto.
+-Dos de los comandos mas utilers son:
+ 	.headers
+	.mode
+
+ Ambos controlan algun especto de la salida, por ejemplo:
+
+ 	sqlite> select 'abc' as star, 'xyz' as end;
+	abc|xyz
+
+ Al ejecutar los comandos "dot-commands" vemos el siguiente resultado:
+
+	sqlite> .headers on
+	sqlite> .mode column
+	sqlite> select 'abc' as star, 'xyz' as end;
+	star  end	
+	----  ---
+	abc   xyz
+
+ SQLite permite asignar un NULL a cualquier valor, NULL no es un valor en si mismo (SQLite en realidad lo implementa como un tipo unico
+ sin valor), pero se usa como marcador o bandera para representar "datos desconocidos o faltantes".
+ NULL no es un valor es una bandera para lo desconocido.
+
+ -No se puede utilizar el operador de igualdad (=) para probar valores NULL, debemos utilizar el operador (IS NULL).
+
+ OPERADORES SIMPLES:
+
+ - ||:
+  Concatenacion de cadenas. Muchos otros productos de base de datos permiten utilizar (+) para la concatenacion, pero SQLite no.
+
+ - (+,-,*,/,%):
+  Suma. resta, multiplicacion, division y modulo (resto).
+
+ - Operadores logicos:
+  Tanto "=" como "==" probaran la igualdad. Mientras que "!=" como "<>" probaran la desigualdad. 
+
+
+ CATEGORIAS DEL LENGUAJE SQL:
+
+ Los comandos de SQL se dividen en 4 categorias, cada una define un subconjunto de comandos que tiene un proposito relacionado.
+ -DDL (Data Definition Language):
+  Comandos que definen las estructuras de las tablas, CREATE TABLE, DROP, son ejemplos de comandos DDL.
+
+  -DML (Data Manipulation Language):
+  Estos son todos los comandos INSERT, UPDATE, DELETE, SELECT que consultan datos reales. Son algunos ejemplos de comandos DML. 
+
+ - TCL ()
+
+ - DCL (Data Control Language):
+  El objetivo principal del DCL es otorgar y revocar el control de accesos. Al igual que permisos de archivo, GRANT y REVOKE, son comandos
+  DCL. 
+
+  SQLite permite la gran mayoria de los comandos DDL, DML y TCL pero carece de los comandos DCL. Ya que SQLite no tiene inicio de sesion
+  ni nombres de usuarios
+
+
+
+
+

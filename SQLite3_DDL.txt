@@ -136,7 +136,30 @@
 		select strftime('%d-%m-%Y', 2455197.5, 'utc');
 		>>01-01-2010
 
-	
+RESTRICCIONES DE COLUMNA:
+
+	Ademas de nombres y tipos de columna un campo tambien puede imponer restricciones en columnas o conjunto de columnas especificos. Una vista mas	
+	completa del comando CREATE TABLE es:
+
+
+		CREATE TABLE name_table (
+
+			column_name   column_type   column_constraints...,
+			[. . . ,]
+
+			table_constraints,
+			[. . . ,]
+		);
+
+		-Las restricciones de columna solo afectan a la columna para la que son definidas. Mientras las restriciones de tabla se pueden utilizar para 
+		 restringir una o mas columnas.
+
+		-Las restricciones que involucran mas de una columna deben definirse como restriccion de tabla.
+
+		-Las restricciones de tabla pueden emplearse para definir un orden de clasificacion personalizado, por ejemplo SQLite incluye la intercalacion (collation) 
+		NOCASE para	ignorar mayusculas y minusculas al ordenar.
+
+		-Tambien se puede asignar un valor por default de NULL al crear una tabla, con la restriccion DEFAULT value
 	
 	
 

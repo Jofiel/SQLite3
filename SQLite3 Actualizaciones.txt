@@ -1,0 +1,88 @@
+DOT-COMMANDS:
+
+-Como logearnos por CRM a la aplicacion SQLite3:
+
+	Navegamos con PS a la ubicacion donde esta nuestro SQLite3, aparece como "sqlite3.exe"
+	y lo ejecutamos de la siguiente manera:
+
+	PS C:\SQLite> .\sqlite3.exe
+
+	Una vez que hayamos ejecutado el .exe nos aparecera la version que tenemos instalada, asi como
+	el mensaje "Connected to a transient in-memory database"
+
+	El prom se nos modificara y aparecera en minusculas de la siguiente manera:sqlite>
+	Asi, estaremos logeados.
+
+-Como salir de la aplicaicion "sqlite3.exe" lo hacemos con el comando: .exit
+
+-Como entrar a una base de datos: 
+	
+	Una vez logeado en la aplicacion, para acceder a una base de datos debemos ejecutar el comando dot:
+
+	.open name_base.db 
+
+	por ejemplo: quiero entrar a una base de datos llamada sqlite-sakila.db, tengo que ejecutar: .open sqlite-sakila.db
+
+-Como ver las tablas creadas:
+
+	Una vez dentro de la base, no nos indica con algun mensaje de salida, lo que podemos hacer es ejecutar un comando dot para
+	poder ver las tablas creadas:
+
+	.tables
+
+	aparecera en forma de lista las tablas credas.
+
+-Como salir de la base: 
+	
+	con el comando dot-commant 
+
+	.quit
+
+	cierra y sale de la aplicacion.
+
+-La funcion PRAGMA table_info(Dprueba); 
+	
+	Esta funcion, que termina con punto y coma regresa el numero de columnas de una tabla, asi como informacion adicional de cada columna.
+
+
+ACTUALIZACIONES:
+
+-Notas: para poder actualizar una tabla en una base de datos, tenemos que estar logeado en la misma base, la tenemos que poder visualizar con el
+ dot-comment ".tables" 
+
+-Tenemos que configurar el modo de visualizacion de la sesion, cada que nos logeamos se reinicia la configuracion a la original, por ejemplo:
+
+	El dot-comment: .mode confugura el modo de salida de la sesion, por defecto esta en modo lista.
+
+		En el modo CSV, los resultados se mostrarán en filas y columnas, y cada campo estará separado por comas. Este formato es fácil de procesar y 		utilizar en aplicaciones externas que requieren datos CSV, como hojas de cálculo o programas de análisis de datos. 
+
+		Para configurar en este dato, tenemos que configaurar la sesion con el comando> .mode csv
+	
+		Para configurar el modo por defecto solo ejecutamos el comando> .mode
+
+
+
+	- .separator "," 
+
+	Lo tenemos que configurar de esta manera por defecto viene configurado por "|"
+
+	Para regresar al modo defecto lo podemos hacer con > .separator
+
+
+	- Para no contemplar por ejemplo los encabezados de un archivo csv, al importar un archivo a una tabla llamada mod23, lo hacemos con el comando:
+
+	sqlite> .import --skip 1 "C:/Users/abia04/Downloads/ventas.csv" mod23
+
+	Aqui, estamos omitiendo la primera fila, y el archivo "ventas.csv" a importar esta en la ruta mencionada y la tabla llamada mod23
+
+	
+	- El comando de punto ".help import" nos proporciona mas informacion sobre las consideraciones que tiene el comando de punto ".impor"
+	
+
+
+
+
+
+	
+	
+

@@ -16,6 +16,7 @@
   tambien se pueden especificar restricciones, condiciones y valores predeterminados opcionales. 
 
  -La sentencia mas basica para crear una tabla es:
+	Nota: Si queremos crear una tabla SQLite no distingue entre minusculas o mayusculas.
 
 	CREATE TABLE table_name (
 		colum_name colum_type,
@@ -135,6 +136,7 @@
 	-Si tenemos almacenadas nuestras fechas en formato de punto flotante o decimal, para visualizarlo como fecha, lo hariamos:
 		select strftime('%d-%m-%Y', 2455197.5, 'utc');
 		>>01-01-2010
+
 
 RESTRICCIONES DE COLUMNA:
 

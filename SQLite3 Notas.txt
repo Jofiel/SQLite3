@@ -47,7 +47,7 @@ Configuracion:
  de punto) porque comienzan con un punto. Los comandos de punto controlan el formato de salida del shell.
 
 -No se pueden mezclar sentencias SQL y comandos de punto.
--Dos de los comandos mas utilers son:
+-Dos de los comandos mas utiles son:
  	.headers
 	.mode
 

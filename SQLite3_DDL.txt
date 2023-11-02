@@ -160,10 +160,6 @@ RESTRICCIONES DE COLUMNA:
 		NOCASE para	ignorar mayusculas y minusculas al ordenar.
 
 		-Tambien se puede asignar un valor por default de NULL al crear una tabla, con la restriccion DEFAULT value
-	
-	
-
-	- 
  
 
 

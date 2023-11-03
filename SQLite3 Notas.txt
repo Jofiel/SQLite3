@@ -14,7 +14,7 @@ Caracteristicas:
 -SQLite accede directamente a sus archivos de almacenamiento.
 -La instancia completa de la base de datos reside en un unico archivo multiplataforma que no requiere administracion.
 -SQLite proporciona un entorno de base de datos relacional muy funcional y flexible que consume recursos minimos.
--La bibl;ioteca SQLite compilada tiene menos de 700 KB en la mayoria de las plataformas y requiere menos de 4 MB para funcionar.
+-La biblioteca SQLite compilada tiene menos de 700 KB en la mayoria de las plataformas y requiere menos de 4 MB para funcionar.
 -Todo el codigo fuente de SQLite esta escrito en C.
 
 
@@ -101,6 +101,9 @@ Configuracion:
   SQLite permite la gran mayoria de los comandos DDL, DML y TCL pero carece de los comandos DCL. Ya que SQLite no tiene inicio de sesion
   ni nombres de usuarios
 
+ -TRABAJAR EN MULTIPLATAFORMA:
+
+ Para conectarte a multiples bases, tenemos que usar el comando 'ATTACH DATABASE' .....
 
 
 

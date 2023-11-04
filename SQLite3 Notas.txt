@@ -1,7 +1,7 @@
 
 What is SQLite?
 
-SQLite es un pquete de software de dominio publico que proporciona un sistema de gestion de base de datos relacionales o RDBMS.
+SQLite es un paquete de software de dominio publico que proporciona un sistema de gestion de base de datos relacionales o RDBMS.
 Los sistemas de bases de datos relacionales se utilizan para almacenar registros definidos por el usuario en tablas grandes. Implemeta
 un gestor de base de datos que le permite ejecutar comandos de consulta complejos que combinan datos de varias tablas para generar
 resumenes de datos.

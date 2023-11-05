@@ -6,7 +6,29 @@ Los sistemas de bases de datos relacionales se utilizan para almacenar registros
 un gestor de base de datos que le permite ejecutar comandos de consulta complejos que combinan datos de varias tablas para generar
 resumenes de datos.
 
-"Lite" no se refiere a sus capacidades. Mas bien es liviano en cuanto a su complejidad de configuracion.
+El conjunto de base de datos (definiciones, tablas, indices y los propios datos), son guardados como un solo fichero estandar en la
+maquina local.
+
+En su version 3, SQLite permite bases de datos de hasta 2 terabytes y la inclusion de campos de tipo BLOB.
+
+-RAZONES PARA ELEGIR SQLite:
+
+Tamaño, SQLite ocupa una pequeña parte de memoria, solo ocupa una biblioteca para acceder a las bases de datos.	
+
+Rendimiento, SQLite realiza operaciones de manera eficiente, es mas rapido que MySQL, PostgreSQL.
+
+Eficacia, implementa un gran subconjunto estándar de comandos, incluyendo subconsultas, vistas y triggers.
+
+Interfaces, cuenta con diferentes interfaces, las cuales permiten trabajar con C++, PHP, Perl, Pyton, ...
+
+Costo, se puede distribuir libremente.
+
+Lonitud variable: la mayoria de los motores SQL asignan una cantidad fija de espacio en el disco para 
+cada resgisto en la mayorias de los campos en una tabla. SQLite realiza todo lo contrario, realizando para ello la cantidad de espacio
+en el disco necesario para almacenar la informacion real del campo. Si quisieras almacenar un solo caracter en un campo predefinido como
+VARCHAR (100), entonces un solo byte en el disco se consume.
+
+El “Lite” no se refiere a sus capacidades, más bien SQLite es liviano en cuato a configuraciones, gastos administrativos y recursos.
 
 Caracteristicas:
 

@@ -79,6 +79,14 @@ ACTUALIZACIONES:
 
 	
 	- El comando de punto ".help import" nos proporciona mas informacion sobre las consideraciones que tiene el comando de punto ".impor"
+
+	- Comando de punto para actualizar el MOD: 
+
+		.import --skip 1 "Plantilla MOD 2023.csv" MOD
+
+		OJO: siempre debes de estar en modo csv y separador por comas.
+
+
 	
 
 

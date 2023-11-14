@@ -86,6 +86,24 @@ ACTUALIZACIONES:
 
 		OJO: siempre debes de estar en modo csv y separador por comas.
 
+	- Comando de punto para actualizar el mod sku:
+
+		.mode csv
+		.separator
+		.import --skip 1 "Plantilla sku.csv" mvtas
+
+		Ojo: importante en los comandos dot-command no es necesario colocar ";" ya que siempre
+		los agregamos al final del comando interpretara que mvtas; es el nombre de la base y
+		nos creara una nueva base con los datos que tratamos de importar.
+
+	- Para actualizar por medio de comando UPDATE:
+
+		-update mvtas set SEO = 'SELAINGENIA'
+ 		where (mvtas.SEO = 'Unknown'); 
+
+		Ojo: despues del SET no es necesario especificar la base a la que pertenece el campo.
+		set mvtas.SEO = 'SELAINGENIA' esto lo lee como un error.
+
 
 	
 

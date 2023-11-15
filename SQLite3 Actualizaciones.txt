@@ -105,7 +105,30 @@ ACTUALIZACIONES:
 		set mvtas.SEO = 'SELAINGENIA' esto lo lee como un error.
 
 
-	
+	- Comandos en CMD: 
+
+		-Podemos colocar un titulo al inicio de sesion de la consola, solo hacemos con el 
+		 comando title nombre_consola_temporal
+
+		-Podemos configurar el color de las letras de consola, por ejemplo:
+		 > color 3 (Las letras del comando salen en color verde)
+
+		-Nos logeamos de la misma forma a sqlite3.
+
+		-Para limpiar la pantalla del CMD, lo hacemos con el comando .shell cls
+
+		-Con el comando .show nos muesta en forma de lista la configuracion que tiene nuestra
+		 configuracion de sqlite3.
+
+		-Los tipos de modos de configuracion los podemos ver con .help mode los mas usados 
+		para mostrar informacion son los box o table.
+
+		-No solo podemos visualizar los comandos en cmd tambien lo podemos hacer en excel.
+
+		-comando .quit para salir del sistema sqlite3
+
+	- SQL (Structured Query lenguge)
+
 
 
 

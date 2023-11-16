@@ -127,7 +127,35 @@ ACTUALIZACIONES:
 
 		-comando .quit para salir del sistema sqlite3
 
-	- SQL (Structured Query lenguge)
+	- SQL (Structured Query lenguge) Lenguaje de Consulta Estructurada:
+
+
+		-Diseñado para administrar y recuperar informacion de sistemas de gestion de bases de datos 
+		relacionales.
+
+		-SQL pretende los siguientes comandos: DDL, DML, DCL y TCL (Lenguaje de manipulacion de datos,
+		 Lenguaje de definicion de datos, Lenguaje de control de datos, Lenguaje de control de transaccion)
+
+		 -Data Definition Lenguaje: se utiliza para definir la estructura de la base de datos.
+
+		 	CREATE
+			ALTER : para alterar la estructura de la base de datos.
+			DROP
+			TRUNCATE
+			COMMENT
+			RENAME : cambia el nombre de un objeto.
+
+		-Data Manipulation Lenguaje: se utiliza para manipular los datos de una base relacional.
+
+			INSERT
+			UPDATE
+			SELECT
+			DELETE
+
+		-Data Control Lenguaje: lenguaje de control de datos. Permite al administrador controlar el acceso 
+		 a los datos contenidos en una base de datos.
+
+
 
 
 

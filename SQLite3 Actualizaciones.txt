@@ -154,7 +154,17 @@ ACTUALIZACIONES:
 
 		-Data Control Lenguaje: lenguaje de control de datos. Permite al administrador controlar el acceso 
 		 a los datos contenidos en una base de datos.
+		 
+	-Como exportar a Excel:
 
+		sqlite> .excel
+		sqlite> select * from mvtas where (mvtas."Fecha factura" = '10/11/2023');
+
+	-Como ver informacion de una tabla:
+
+		Una ves logeado y que podamos ver las tablas en SQLite ejecutamos el comoando, el cual no es de punto
+
+			PRAGMA table_info(mvtas);
 
 
 

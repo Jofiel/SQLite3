@@ -121,6 +121,21 @@ Como crear una base de datos SQLite desde consola:
     sqlite>
 
 
+-Disparador o comando DDL TRIGGER:
+
+    Es un objeto de base de datos que se ejecuta automaticamente cuando se emite una instruccion 
+    como INSERT, UPDATE o DELETE.
+
+    SINTAXIS:
+
+    CREATE TIGGER name_tigger 
+    [BEFORE|AFTER] [INSERT|UPDATE|DELETE]
+    ON table_name
+    BEGIN
+    INSERT INTO table_name (col1, col2) VALUES ([new/old].val1,[new/old].val2); END;
+
+
+
 
 
 

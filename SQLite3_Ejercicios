@@ -1,1 +1,174 @@
 
+Como crear una base de datos SQLite desde consola:
+
+    No solocamos en el directorio donde queremos crear nuestra base de datos, en nuestro caso 
+    la queremos crear en la carpeta llamada SQLite3
+
+    cd .\Users\Jofiel\Documents\SQLite3>
+
+    Una vez en el directorio, ejecutamos:
+
+    cd .\Users\Jofiel\Documents\SQLite3> sqlite3 nombrebase.db
+
+    Esto nos creara una base llamada "nombrebase"
+
+    Ojo: no debemos estar logeados dentro de sqlite3.exe
+
+    Cuando ejecutamos este comando no podemos visualizar inmediatamente nuestra base de datos, para
+    ello necesitamos hacer una operaion en nuestra base de datos, como visualizarla con el comando
+    .databases, el cual nos retorna:
+
+    sqlite> .databases
+    main: C:\Users\Jofiel\Documents\SQLite3\mibase.db r/w
+    sqlite>
+
+-Para limpiar la pantalla dentro de sqlite3, es con el dot-commands:
+
+    .shell cls
+
+-Comando para crear una tabla llamada clientes, con un campo id que sea llave primaria,
+ que se auto incremente y que tenga un segundo campo de texto llamado nombre y uno tercero
+ llamado apellido:
+
+    sqlite> create table clientes(Id integer primary key autoincrement,
+    (x1...> nombre text(16) not null,
+    (x1...> apellido text(16) not null);
+    sqlite>
+
+    Ojo: los comandos de SQL siempre terminan con punto y coma
+
+-Si queremos visualizar la informacion de nuestra tabla, asi como sus campos y tipo de datos,
+    lo hacemos de la siguiente manera:
+
+    sqlite> pragma table_info(clientes);
+┌─────┬──────────┬──────────┬─────────┬────────────┬────┐
+│ cid │   name   │   type   │ notnull │ dflt_value │ pk │
+├─────┼──────────┼──────────┼─────────┼────────────┼────┤
+│ 0   │ Id       │ INTEGER  │ 0       │            │ 1  │
+│ 1   │ nombre   │ text(16) │ 1       │            │ 0  │
+│ 2   │ apellido │ text(16) │ 1       │            │ 0  │
+└─────┴──────────┴──────────┴─────────┴────────────┴────┘
+
+- Insertando Datos con el comando DML: insert into
+    Este comando nos sirve para insertar informacion en una tabla.
+
+    Sintaxis:
+
+    INSERT INTO nombre_tabla (col1, col2, ...) VALUES ('Valor1', 'Valor2', ...)
+
+    Como el campo Id se auto incrementa no necesitamos ingrear informacion en el, solo 
+    necesitamos ingresar registros.
+
+    sqlite> insert into clientes (nombre,apellido) values ('Carlos','Tenorio'),
+   ...> ('Jofiel','Tenorio'),
+   ...> ('Nallely','Sanchez');
+    sqlite>
+
+    sqlite> select * from clientes;
+    ┌────┬─────────┬──────────┐
+    │ Id │ nombre  │ apellido │
+    ├────┼─────────┼──────────┤
+    │ 1  │ Carlos  │ Tenorio  │
+    │ 2  │ Jofiel  │ Tenorio  │
+    │ 3  │ Nallely │ Sanchez  │
+    └────┴─────────┴──────────┘
+    sqlite>
+
+-Modificar datos: sentencia UPDATE
+
+    Se utiliza para modificar valores de una tabla.
+
+    SINTAXIS:
+
+    UPDATE nombre_tabla SET col1 = valor1, col2 = valor2 WHERE col3 = val3;
+
+    sqlite> update clientes set nombre = 'Francisco', apellido = 'Vazquez'
+    ...> where Id = 2;
+    >sqlite>
+
+    sqlite> select * from clientes;
+    ┌────┬───────────┬──────────┐
+    │ Id │  nombre   │ apellido │
+    ├────┼───────────┼──────────┤
+    │ 1  │ Carlos    │ Tenorio  │
+    │ 2  │ Francisco │ Vazquez  │
+    │ 3  │ Nallely   │ Sanchez  │
+    │ 4  │ Luz Maria │ Oliva    │
+    │ 5  │ Nicasia   │ Ponce    │
+    │ 6  │ Maria     │ Vazquez  │
+    └────┴───────────┴──────────┘
+    sqlite>
+
+-Eliminar datos: sentencia DML DELITE
+
+    Nos sirve para eliminar registros de una tabla.
+
+    DELETE FROM tabla_name WHERE columna = valor;
+
+    sqlite> delete from clientes where Id=3;
+    sqlite>
+
+    sqlite> select * from clientes;
+    ┌────┬───────────┬──────────┐   
+    │ Id │  nombre   │ apellido │
+    ├────┼───────────┼──────────┤
+    │ 1  │ Carlos    │ Tenorio  │
+    │ 2  │ Francisco │ Vazquez  │
+    │ 4  │ Luz Maria │ Oliva    │
+    │ 5  │ Nicasia   │ Ponce    │
+    │ 6  │ Maria     │ Vazquez  │
+    └────┴───────────┴──────────┘
+    sqlite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

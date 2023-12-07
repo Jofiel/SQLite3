@@ -6,4 +6,6 @@ estructuras creadas con los comandos DDL llenas de datos utiles. Los comandos DM
 
 1.Comandos de actualizacion (update, insert, delete). Todos estos comandos alteran la estructura de los datos almacenados de alguna manera.
 2.Comandos de consulta (select) que se utilizan para extraer datos. No solo imprime los valores devueltos, sino que tambien proporciona una
-  gran cantidad de  opciones para combinar diferentes tablas y manipular datos antes de devolver el resultado final
+  gran cantidad de  opciones para combinar diferentes tablas y manipular datos antes de devolver el resultado final.
+
+El coando "select" es sin duda el comando de SQL mas complejo. Tambien es probablemente es comando de SQL mas imporntante

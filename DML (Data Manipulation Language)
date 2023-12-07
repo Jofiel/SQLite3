@@ -1,0 +1,9 @@
+
+DML (Data Manipulation Language)
+
+El lenguaje de manipulacion de datos consiste en introducir y sacar datos de la base de datos. Los comandos DML se puede usar para cargar aquellas
+estructuras creadas con los comandos DDL llenas de datos utiles. Los comandos DML en SQLite se dividen en dos categorias basicas.
+
+1.Comandos de actualizacion (update, insert, delete). Todos estos comandos alteran la estructura de los datos almacenados de alguna manera.
+2.Comandos de consulta (select) que se utilizan para extraer datos. No solo imprime los valores devueltos, sino que tambien proporciona una
+  gran cantidad de  opciones

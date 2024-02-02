@@ -56,7 +56,7 @@ ACTUALIZACIONES:
 	
 	-El dot-comment: .mode confugura el modo de salida de la sesion, por defecto esta en modo lista.
 
-		En el modo CSV, los resultados se mostrarán en filas y columnas, y cada campo estará separado por comas. Este formato es fácil de procesar y 		utilizar en aplicaciones externas que requieren datos CSV, como hojas de cálculo o programas de análisis de datos. 
+		En el modo CSV, los resultados se mostrarán en filas y columnas, y cada campo estará separado por comas. Este formato es fácil de procesar y utilizar en aplicaciones externas que requieren datos CSV, como hojas de cálculo o programas de análisis de datos. 
 
 		Para configurar en este dato, tenemos que configaurar la sesion con el comando> .mode csv
 	

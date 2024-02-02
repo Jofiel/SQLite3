@@ -2,5 +2,13 @@ Backup SQLite3: Tener en cuenta que esta manera crea una copia fisica de nuestra
 si esta es muy grande puede ocasionar problemas. Para esto seria una opcion crear una copia 
 de seguridad de forma periodica.
 
+#Creamos una nueva tabla llamada mvtas_backup con el mismo contenido que la tabla mvtas
+CREATE TABLE mvtas_backup AS SELECT * FROM mvtas;
+
+#Podemos restaurar desde la copia de seguridad si es necesario.
+#En el caso que necesitemes restaurar la tabla mvtas desde la copia de seguridad.
+
+INSERT INTO mvtas SELECT * FROM mvtas_backup;
+
 
 

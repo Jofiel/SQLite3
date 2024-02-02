@@ -1,0 +1,3 @@
+Backup SQLite3: Tener en cuenta que esta manera crea una copia fisica de nuestra tabla, si esta es muy grande puede ocasionar problemas. Para esto seria una opcion crear una copia de seguridad
+de forma periodica.
+

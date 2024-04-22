@@ -10,5 +10,13 @@ CREATE TABLE mvtas_backup AS SELECT * FROM mvtas;
 
 INSERT INTO mvtas SELECT * FROM mvtas_backup;
 
+INSERTAR QUERY DE VENTAS A LA TABLA DE BACKUP NOTA DE CREDITO:
+
+INSERT INTO backup_NC
+SELECT *
+FROM MOD AS a
+WHERE (a.[Fecha factura]='26/03/2024' AND a.[SubEntidad]='FORANEO SURESTE' AND a.[Id cliente]=1490);
+
+
 
 

@@ -1,0 +1,8 @@
+
+Creamos una base de datos, en cmd:
+
+CREATE TABLE imagenes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT,
+    imagen BLOB
+);

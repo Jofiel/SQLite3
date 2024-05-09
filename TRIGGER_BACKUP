@@ -1,0 +1,55 @@
+CREATE TRIGGER respaldo_mvtas
+         AFTER DELETE
+            ON mvtas
+BEGIN
+    INSERT INTO backup_mvtas (
+                                 SEO,
+                                 SubEntidad,
+                                 [Id ejecutivo venta],
+                                 [Ejecutivo venta],
+                                 [Id ejecutivo Actual],
+                                 [Id factura],
+                                 Factura,
+                                 [Fecha factura],
+                                 [Id cliente],
+                                 Cliente,
+                                 [Valor divisa],
+                                 [Equivalencia divisa],
+                                 MB,
+                                 MBP,
+                                 MBF,
+                                 [1A],
+                                 [2A],
+                                 [3A],
+                                 [Fecha NC],
+                                 [Tipo nota],
+                                 SKU,
+                                 Venta,
+                                 Unidades
+                             )
+                             VALUES (
+                                 OLD.SEO,
+                                 OLD.SubEntidad,
+                                 OLD.[Id ejecutivo venta],
+                                 OLD.[Ejecutivo venta],
+                                 OLD.[Id ejecutivo Actual],
+                                 OLD.[Id factura],
+                                 OLD.Factura,
+                                 OLD.[Fecha factura],
+                                 OLD.[Id cliente],
+                                 OLD.Cliente,
+                                 OLD.[Valor divisa],
+                                 OLD.[Equivalencia divisa],
+                                 OLD.MB,
+                                 OLD.MBP,
+                                 OLD.MBF,
+                                 OLD.[1A],
+                                 OLD.[2A],
+                                 OLD.[3A],
+                                 OLD.[Fecha NC],
+                                 OLD.[Tipo nota],
+                                 OLD.SKU,
+                                 OLD.Venta,
+                                 OLD.Unidades
+                             );
+END;

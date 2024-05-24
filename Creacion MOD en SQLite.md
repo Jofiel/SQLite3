@@ -12,8 +12,10 @@
 *select * from MOD_PB as a where(a.Objetivo <> '');*<br>
 El objetivo de esta tabla es que sea un backup de presupuestos y poder analizarla para eliminar los presupuestos de la tabla de transacciones MOD_PB.
 
-5. Crear tablas de **Butgets** sera una por Ejecutivos y otra por Estados:<br>
+5. Creamos el campo Mes_numero, para poder concatenar la fecha en una sola necesitamos que el mes no sea formato de texto.
+
+0. Crear tablas de **Butgets** sera una por Ejecutivos y otra por Estados:<br>
 **-Butgets_executive**<br>
 **-Butgets_state**
 
-
+"C:/Users/abia04/Downloads/2019.csv"

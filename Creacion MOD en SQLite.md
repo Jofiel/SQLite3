@@ -10,4 +10,10 @@
 
 4. Se creo una tabla llamada **Original_budgets** con todos los presupuestos de todos los años por medio de la consulta:<br>
 *select * from MOD_PB as a where(a.Objetivo <> '');*<br>
-El objetivo de esta tabla es que sea un backup de presupuestos y poder analizarla para eliminaer los presupuestos de la tabla de transacciones MOD_PB. 
+El objetivo de esta tabla es que sea un backup de presupuestos y poder analizarla para eliminar los presupuestos de la tabla de transacciones MOD_PB.
+
+5. Crear tablas de **Butgets** sera una por Ejecutivos y otra por Estados:<br>
+**-Butgets_executive**<br>
+**-Butgets_state**
+
+
